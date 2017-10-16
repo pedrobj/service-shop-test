@@ -19,10 +19,12 @@ Please note that, your project needs to have at least the following features:
     - Definição dos recursos de storage. (localStorage)
 - Desenvolvimento ciclo do redux. (3 pontos)
     - Desenvolvimento de actions e reducers (product / cart)
+    - Testes redux actions/reducers
 - Desenvolvimento do styleguide (3 pontos)
     - flexboxgrid (responsive)
 - Teste de integração (3 pontos)
-    - Actions/Reducers coverage
+
+- TODO: Server Side Rendering, Localização, Service Worker
 
 #### Estrutura de pasta
 Estrutura modular, baseada em dominios (http://mern.io modular structure)

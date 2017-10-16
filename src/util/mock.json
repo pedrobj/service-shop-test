@@ -1,0 +1,41 @@
+{
+  "list": [
+    {
+      "name": "Service 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
+      "price": 399.99,
+      "amount": 4
+    },
+    {
+      "name": "Service 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
+      "price": 199.99,
+      "amount": 0
+    },
+    {
+      "name": "Service 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
+      "price": 19.90,
+      "amount": 10
+    },
+    {
+      "name": "Service 4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
+      "price": 49.50,
+      "amount": 7
+    },
+    {
+      "name": "Service 5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
+      "price": 25.99,
+      "amount": 0
+    },
+    {
+      "name": "Service 6",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
+      "price": 1.99,
+      "amount": 1
+    }
+  ]
+}
+
