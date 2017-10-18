@@ -1,39 +1,57 @@
 {
   "list": [
     {
+      "id": "21938udhjsahj23",
       "name": "Service 1",
+      "slug": "service_1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
       "price": 399.99,
+      "category": "category 1",
       "amount": 4
     },
     {
+      "id": "asdasd23q32df1",
       "name": "Service 2",
+      "slug": "service_2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
       "price": 199.99,
+      "category": "category 1",
       "amount": 0
     },
     {
+      "id": "430dit549jgklkdjw",
       "name": "Service 3",
+      "slug": "service_3",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
       "price": 19.90,
+      "category": "category 1",
       "amount": 10
     },
     {
+      "id": "0930493kle1mnmwmnd",
       "name": "Service 4",
+      "slug": "service_4",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
       "price": 49.50,
+      "category": "category 2",
       "amount": 7
     },
     {
+      "id": "21kl3j12lksd121m2",
       "name": "Service 5",
+      "slug": "service_5",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
       "price": 25.99,
+      "category": "category 2",
       "amount": 0
     },
     {
+      "id": "lk23mlkcsm21321kd",
       "name": "Service 6",
+      "slug": "service_6",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit magna a mollis fermentum. Quisque sodales placerat turpis, vel aliquam arcu dapibus id.",
       "price": 1.99,
+      "category": "category 3",
       "amount": 1
     }
   ]

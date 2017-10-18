@@ -1,0 +1,13 @@
+.CartButton {
+  padding: 10px;
+  width: 100%;
+  text-transform: capitalize;
+  background-color: #5cb85c;
+  border: solid 1px #4cae4c;
+  color: #FFF;
+  cursor: pointer;
+  &:hover {
+    background-color: #449d44;
+    border-color: #398439;
+  }
+}
