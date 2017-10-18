@@ -13,7 +13,7 @@ function PostListCategory(props) {
             key={category}
             className={`ProductListPage-category-item ${isActive(category, props.active)}`}
             onClick={() => props.handleClick(category)}>
-            {category}
+            {category || 'All'}
           </span>
         ))
       }

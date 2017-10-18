@@ -5,6 +5,7 @@ import 'flexboxgrid';
 // Import Components
 import Helmet from 'react-helmet';
 
+import './App.scss';
 import './sweetalert2.scss';
 
 export class App extends Component {
