@@ -9,7 +9,7 @@ import ProductList from '../components/ProductList';
 import PostListCategory from '../components/ProductListCategory';
 
 // Import Actions
-import { fetchProducts } from '../ProductActions';
+import { fetchProducts, changeFilter } from '../ProductActions';
 
 // Import Selectors
 import { getTotalProducts } from '../ProductReducer';
@@ -27,16 +27,17 @@ class ProductListPage extends Component {
     return (
       <div className="ProductListPage">
         <div className="ProductListPage-title row">
-          Serviços Disponíveis
+          Services Available
           <Link
             to="/cart"
             className="ProductListPage-cart">
-            Carrinho ({getTotalProducts(this.props.cart)})
+            Cart ({getTotalProducts(this.props.cart)})
           </Link>
         </div>
         <PostListCategory
           categories={categories}
-          handleClick={() => false} />
+          active={this.props.category}
+          handleClick={this.props.changeFilter} />
         <ProductList
           products={this.props.products}
           loading={this.props.loading} />
@@ -52,13 +53,16 @@ ProductListPage.need = [() => fetchProducts()];
 const mapStateToProps = (state) => ({
   products: state.product.products,
   loading: state.product.loading,
+  category: state.product.category,
   cart: state.cart.products,
 });
 
 // Retrieve dispatch actions as props
-const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchProducts }, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchProducts, changeFilter }, dispatch);
 
 ProductListPage.propTypes = {
+  loading: PropTypes.bool,
+  category: PropTypes.string,
   cart: PropTypes.object,
   products: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
@@ -70,6 +74,7 @@ ProductListPage.propTypes = {
   })).isRequired,
   fetchProducts: PropTypes.func.isRequired,
   chackAndAddToCart: PropTypes.func,
+  changeFilter: PropTypes.func,
 };
 
 ProductListPage.contextTypes = {

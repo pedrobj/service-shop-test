@@ -3,12 +3,14 @@ import {
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS_FAIL,
   FETCH_PRODUCTS_FULL,
+  SET_FILTER,
 } from './ProductActions';
 
 // Initial State
 const initialState = {
   loading: false,
   error: false,
+  category: '',
   products: [],
 };
 
@@ -26,7 +28,7 @@ const ProductReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: false,
-        products: [...state.products, ...action.products],
+        products: [...action.products],
       };
 
     case FETCH_PRODUCTS_FAIL:
@@ -42,6 +44,12 @@ const ProductReducer = (state = initialState, action) => {
         error: false,
         loading: false,
         loaded: true,
+      };
+
+    case SET_FILTER:
+      return {
+        ...state,
+        category: action.category,
       };
 
     default:
