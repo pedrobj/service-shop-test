@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 import App from './modules/App/App';
 
 // require.ensure polyfill for node
@@ -16,7 +16,7 @@ if (typeof require.ensure !== 'function') {
  */
 if (process.env.NODE_ENV !== 'production') {
   // Require async routes only in development for react-hot-reloader to work.
-  require('./modules/App/App');
+  require('./modules/Product/pages/ProductListPage');
 }
 
 // react-router setup with code-splitting
@@ -25,5 +25,20 @@ export default (
   <Route
     path="/"
     component={App}>
+    <IndexRoute
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Product/pages/ProductListPage').default);
+        });
+      }}
+    />
+    <Route
+      path="/product/:slug-:id"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Product/pages/ProductListPage').default);
+        });
+      }}
+    />
   </Route>
 );

@@ -49,5 +49,9 @@ const ProductReducer = (state = initialState, action) => {
   }
 };
 
+// Export selectors
+export const getTotalProducts = products =>
+  Object.keys(products).reduce((a, b) => (products[a] || a) + products[b], 0);
+
 // Export Reducer
 export default ProductReducer;

@@ -11,10 +11,12 @@ export const addToCartFail = () => ({ type: ADD_TO_CART_FAIL });
 export const removeFromCart = (id) => ({ type: REMOVE_FROM_CART, id });
 
 // Action Creatos
-export const chackAndAddToCart = ({ id, amount }) => (dispatch, getState) => {
-  const product = { total: 2 }; // getState().products.find(p => p.id === id) || {};
-  if (product.total > 0) {
-    return addToCart({ id, amount });
+export const chackAndAddToCart = (id, amount) => (dispatch, getState) => {
+  // Fake amount check. Deveria se criar uma endpoint para trazer se o total do inventory é válido.
+  const product = getState().product.products.find(p => p.id === id) || {};
+  if (product.amount > 0) {
+    return dispatch(addToCart({ id, amount }));
   }
-  return addToCartFail();
+  swal('Add to cart error', 'Empty inventory.', 'error').catch(swal.noop);
+  return dispatch(addToCartFail());
 };

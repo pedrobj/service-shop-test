@@ -5,6 +5,8 @@ import 'flexboxgrid';
 // Import Components
 import Helmet from 'react-helmet';
 
+import './sweetalert2.scss';
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +34,9 @@ export class App extends Component {
               content: 'width=device-width, initial-scale=1',
             },
           ]} />
-        {this.props.children}
+        <div className="container-fluid">
+          {this.props.children}
+        </div>
       </div>
     );
   }
