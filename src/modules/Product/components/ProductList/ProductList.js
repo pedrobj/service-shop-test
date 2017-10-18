@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Import Components
-import ProductListItem from './ProductListItem/ProductListItem';
+import ProductListItem from '../ProductListItem/ProductListItem';
 
 // Import Style
 import './ProductList.scss';
@@ -23,10 +23,6 @@ function ProductList(props) {
     </div>
   );
 }
-
-ProductList.defaultProps = {
-  title: '',
-};
 
 ProductList.propTypes = {
   loading: PropTypes.bool,

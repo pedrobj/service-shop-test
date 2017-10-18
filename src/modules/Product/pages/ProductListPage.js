@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 
 // Import Components
-import ProductList from '../components/ProductList';
+import ProductList from '../components/ProductList/ProductList';
 import PostListCategory from '../components/ProductListCategory';
 
 // Import Actions
@@ -16,7 +16,7 @@ import { getTotalProducts } from '../ProductReducer';
 
 import './ProductListPage.scss';
 
-const categories = ['category 1', 'category 2', 'category 3'];
+const categories = ['', 'category 1', 'category 2', 'category 3'];
 
 class ProductListPage extends Component {
   componentDidMount() {
@@ -26,6 +26,7 @@ class ProductListPage extends Component {
   render() {
     return (
       <div className="ProductListPage">
+        <div className="breadcrumb row"><Link to="/">Home</Link></div>
         <div className="ProductListPage-title row">
           Services Available
           <Link

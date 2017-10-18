@@ -2,6 +2,7 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   ADD_TO_CART_FAIL,
+  UPDATE_CART_AMOUNT,
 } from './CartActions';
 
 // Initial State
@@ -21,6 +22,15 @@ const CartReducer = (state = initialState, action) => {
         products: {
           ...state.products,
           [action.id]: (state.products[action.id] || 0) + (action.amount || 1),
+        },
+      };
+
+    case UPDATE_CART_AMOUNT:
+      return {
+        ...state,
+        products: {
+          ...state.products,
+          [action.id]: action.amount || 1,
         },
       };
 
