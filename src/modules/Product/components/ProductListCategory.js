@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const isActive = (category, active) => (category === active
+  ? 'ProductListPage-category-item-active' : '');
+
 function PostListCategory(props) {
   return (
     <div className="ProductListPage-category row">
@@ -8,8 +11,8 @@ function PostListCategory(props) {
         props.categories.map(category => (
           <span
             key={category}
-            className="ProductListPage-category-item"
-            onClick={props.handleClick(category)}>
+            className={`ProductListPage-category-item ${isActive(category, props.active)}`}
+            onClick={() => props.handleClick(category)}>
             {category}
           </span>
         ))
@@ -20,6 +23,7 @@ function PostListCategory(props) {
 
 PostListCategory.propTypes = {
   categories: PropTypes.array.isRequired,
+  active: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
 };
 

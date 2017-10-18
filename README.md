@@ -24,8 +24,6 @@ Please note that, your project needs to have at least the following features:
     - flexboxgrid (responsive)
 - Teste de integração (3 pontos)
 
-- TODO: Server Side Rendering, Localização, Service Worker
-
 #### Estrutura de pasta
 Estrutura modular, baseada em dominios (http://mern.io modular structure)
 ```
@@ -46,6 +44,12 @@ Estrutura modular, baseada em dominios (http://mern.io modular structure)
 ```
 
 ### TODOS
+- Server Side Rendering
+- Localização
+- Service Worker
+- Feature: pagination, infinite scroll
+- Recovery cart from localStorage
+- Product Page
 
 ### Usage
 

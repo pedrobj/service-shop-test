@@ -10,7 +10,7 @@ const CartButton = (props) =>
   <button
     className="CartButton"
     onClick={() => props.dispatch(chackAndAddToCart(props.id, 1))}>
-    Comprar
+    Buy
   </button>;
 
 CartButton.propTypes = {
